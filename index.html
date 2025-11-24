@@ -8,7 +8,7 @@
     :root{
       --bg:#f5f8ff;
       --card:#ffffff;
-      --accent:#1a73e8; /* blue theme */
+      --accent:#1a73e8;
       --muted:#586070;
       --radius:12px;
       --maxw:1100px;
@@ -51,21 +51,19 @@
     .btn{background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:600}
     .btn.secondary{background:transparent;color:var(--accent);border:1px solid rgba(26,115,232,0.12)}
 
-    /* Certifications grid */
+    /* Certifications */
     .cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
     .cert{background:#fff;padding:10px;border-radius:10px;border:1px solid rgba(15,23,42,0.03);display:flex;align-items:center;justify-content:center;height:110px}
     .cert img{max-width:100%;max-height:90px;object-fit:contain}
 
     footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
 
-    /* Responsive */
     @media (max-width:760px){
       .hero{flex-direction:column;align-items:center;text-align:center}
       .project{grid-template-columns:1fr}
       .project .actions{align-items:center;flex-direction:row}
     }
 
-    /* Simple fade-in animations */
     .fade{opacity:0;transform:translateY(8px);animation:fadeIn .6s ease forwards}
     .delay-1{animation-delay:.08s}
     .delay-2{animation-delay:.16s}
@@ -75,35 +73,40 @@
 </head>
 <body>
   <div class="container">
-    <!-- HERO / HEADER -->
+
+    <!-- HERO -->
     <section class="hero fade delay-1">
       <div class="avatar">
-        <!-- Replace PATH_TO_PROFILE_IMAGE with your image path -->
         <img src="profile_pic.jpg" />
       </div>
       <div class="intro">
         <h1 class="name">Arun Kumar T</h1>
         <div class="meta">M.Sc. Data Analytics (ongoing) — Christ University, Bangalore</div>
         <div class="meta">Phone: +91 72047 88106 • Email: <a href="mailto:arunkumartekumani46@gmail.com">arunkumartekumani46@gmail.com</a></div>
-        <div class="links"><a href="https://github.com/Arungthub" target="_blank">GitHub</a> <a href="https://linkedin.com/in/arun-tekumani-775659281" target="_blank">LinkedIn</a> <a href="RESUME_PATH" class="btn secondary">Download Resume</a></div>
+        <div class="links">
+          <a href="https://github.com/Arungthub" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/in/arun-tekumani-775659281" target="_blank">LinkedIn</a>
+          <a href="RESUME_PATH" class="btn secondary">Download Resume</a>
+        </div>
       </div>
     </section>
 
     <!-- SUMMARY -->
     <section class="section fade delay-2">
       <h2>Summary</h2>
-      <p class="lead">Detail-oriented Data Analytics student currently pursuing an M.Sc. in Data Analytics. Proficient in Python, SQL, Power BI, Tableau, and Excel. Experienced in building dashboards, performing predictive modeling, and conducting NLP-based sentiment analysis. Passionate about converting raw data into actionable business insights and visual stories that support decision-making.</p>
+      <p class="lead">
+        Detail-oriented Data Analytics student currently pursuing an M.Sc. in Data Analytics. Proficient in Python,
+        SQL, Power BI, Tableau, and Excel. Experienced in building dashboards, performing predictive modeling,
+        and conducting NLP-based sentiment analysis. Passionate about converting raw data into actionable insights.
+      </p>
     </section>
 
-
-     <!-- SUMMARY -->
+    <!-- EDUCATION -->
     <section class="section fade delay-2">
       <h2>Education</h2>
-      <p class="lead">Christ University (MSc Data Analytics)      June 2024 - Present</p>
-      <p class="lead">Sri Krishna Degree College (BCA)            Sep 2021 - June 2024  </p>
-
+      <p class="lead">Christ University (MSc Data Analytics) — June 2024 - Present</p>
+      <p class="lead">Sri Krishna Degree College (BCA) — Sep 2021 - June 2024</p>
     </section>
-    
 
     <!-- SKILLS -->
     <section class="section fade delay-3">
@@ -120,7 +123,7 @@
       </div>
     </section>
 
-    <!-- PROJECTS — stacked, one by one -->
+    <!-- PROJECTS -->
     <section class="section fade delay-1">
       <h2>Projects</h2>
 
@@ -128,7 +131,11 @@
       <article class="project fade delay-2">
         <div>
           <h3>Amazon Sales Dashboard (Power BI)</h3>
-          <p>Developed a sales enablement dashboard that visualizes revenue, category performance, and customer trends. Implemented automated ETL using Power Query and built interactive visuals for sales analysis.</p>
+          <p>
+            Built an interactive Power BI dashboard analyzing Amazon’s multi-category sales data. Automated ETL pipelines using Power Query,
+            enabling seamless data cleaning and transformation. Designed visuals to highlight revenue trends, category performance, customer
+            behavior, and seasonal demand patterns. Added dynamic filters and drill-through features to support data-driven decisions across teams.
+          </p>
         </div>
         <div class="actions">
           <a class="btn" href="PROJECT_LINK_1" target="_blank">View Project</a>
@@ -138,10 +145,14 @@
       <!-- Project 2 -->
       <article class="project fade delay-3">
         <div>
-          <h3>Big Mart Sales Prediction (Flask + ML)</h3>
-          <p>Built a regression model to forecast item-level sales and deployed it within a Flask web app for interactive predictions. Includes data preview, feature selection, and model performance visualization.</p>
+          <h3>Big Mart Sales Prediction (Flask + Machine Learning)</h3>
+          <p>
+            Developed an end-to-end regression-based ML system for forecasting item-level sales using historical retail datasets. Implemented feature
+            engineering, encoding, and normalization to prepare data for multiple models including Random Forest and XGBoost. Deployed the final model 
+            using a Flask web app that provides real-time predictions, dataset previews, and visual insights into model performance and feature impacts.
+          </p>
         </div>
-         <div class="actions">
+        <div class="actions">
           <a class="btn" href="https://github.com/Arungthub/Big_Mart_Sales_prediction" target="_blank">View Project</a>
         </div>
       </article>
@@ -149,8 +160,12 @@
       <!-- Project 3 -->
       <article class="project fade delay-2">
         <div>
-          <h3>AMEX Transaction Classification (ANN)</h3>
-          <p>Analyzed American Express transaction data and trained a multi-layer neural network to classify customer outcomes. Included preprocessing (encoding, scaling) and evaluation on unseen data.</p>
+          <h3>American Express Transaction Classification (ANN)</h3>
+          <p>
+            Analyzed AMEX transaction datasets to build a deep learning classification model using TensorFlow/Keras. Performed data preprocessing 
+            (encoding, scaling, train-test splits) and handled class imbalance. Designed a multi-layer ANN with optimized activation functions, dropout, 
+            and early stopping. Evaluated performance through accuracy, precision, recall, and confusion matrix to derive insights into customer risk behavior.
+          </p>
         </div>
         <div class="actions">
           <a class="btn" href="https://github.com/Arungthub/AMex-Ann-Project" target="_blank">View Project</a>
@@ -161,7 +176,11 @@
       <article class="project fade delay-3">
         <div>
           <h3>Zomato Review Sentiment Analysis (NLP)</h3>
-          <p>Performed sentiment analysis on Zomato reviews using NLP pipelines and trained a Naïve Bayes classifier. Visualized sentiment distribution and key topics in Tableau.</p>
+          <p>
+            Performed sentiment analysis on Zomato review text using an NLP pipeline built with NLTK. Applied text preprocessing steps such as tokenization,
+            stopword removal, stemming, and TF-IDF vectorization. Trained a Naïve Bayes classifier achieving strong accuracy. Built Tableau dashboards to
+            visualize sentiment distribution, common keywords, and customer satisfaction trends for improved business understanding.
+          </p>
         </div>
         <div class="actions">
           <a class="btn" href="https://github.com/Arungthub/Zomato-Review-Analysis" target="_blank">View Project</a>
@@ -170,57 +189,51 @@
 
     </section>
 
+    <!-- CERTIFICATIONS -->
+    <section class="section fade delay-1">
+      <h2>Certifications</h2>
 
-    <!-- Certifications -->
+      <article class="project fade delay-3">
+        <div><h3>Data Analytics</h3></div>
+        <div class="actions">
+          <a class="btn" href="Data_Analysis_Certification.jpg" target="_blank">View Certificate</a>
+        </div>
+      </article>
 
+      <article class="project fade delay-3">
+        <div><h3>Power BI & Business Intelligence</h3></div>
+        <div class="actions">
+          <a class="btn" href="Power_BI_Certification.jpg" target="_blank">View Certificate</a>
+        </div>
+      </article>
 
+      <article class="project fade delay-3">
+        <div><h3>Accenture Data Analytics & Visualization (Forage)</h3></div>
+        <div class="actions">
+          <a class="btn" href="Accenture_Certification.jpg" target="_blank">View Certificate</a>
+        </div>
+      </article>
 
-     <section class="section fade delay-1">
-       <h2>Certifications</h2>
-       <!-- Certificate 1 -->
+      <article class="project fade delay-3">
+        <div><h3>American Express (ANN Project)</h3></div>
+        <div class="actions">
+          <a class="btn" href="AmeX_Certification.jpg" target="_blank">View Certificate</a>
+        </div>
+      </article>
 
-       <article class="project fade delay-3">
-         <div><h3>Data Analytics</h3></div>
-         <div class="actions">
-         <a class="btn" href="Data_Analysis_Certification.jpg" target="_blank">View Certificate</a>
-         </div>
-       </article>
+      <article class="project fade delay-3">
+        <div><h3>Zomato Review Sentiment Analysis (NLP Project)</h3></div>
+        <div class="actions">
+          <a class="btn" href="Zomato_Certification.jpg" target="_blank">View Certificate</a>
+        </div>
+      </article>
 
-       <article class="project fade delay-3">
-         <div><h3>Power BI & Business Intelligence</h3></div>
-         <div class="actions">
-           <a class="btn" href="Power_BI_Certification.jpg" target="_blank">View Certificate</a>
-         </div>
-        </article>
+    </section>
 
-        <article class="project fade delay-3">
-         <div><h3>Accenture Data Analytics & Visualization (Forage)</h3></div>
-          <div class="actions">
-            <a class="btn" href="Accenture_Certification.jpg" target="_blank">View Certificate</a>
-          </div>
-        </article>
-        
-        <!-- Certificate 3 -->
-        <article class="project fade delay-3">
-          <div><h3>American Express (ANN Project)</h3></div>
-          <div class="actions">
-           <a class="btn" href="AmeX_Certification.jpg" target="_blank">View Certificate</a>
-          </div>
-        </article>
-
-
-        <article class="project fade delay-3">
-         <div><h3>Zomato Review Sentiment Analysis (NLP Project)</h3></div>
-          <div class="actions">
-           <a class="btn" href="Zomato_Certification.jpg" target="_blank">View Certificate</a>
-          </div>
-        </article>
-      </section>
-
-      
     <footer>
       © 2025 Arun Kumar T • Bangalore • <a href="mailto:arunkumartekumani46@gmail.com">arunkumartekumani46@gmail.com</a>
     </footer>
+
   </div>
 </body>
 </html>
