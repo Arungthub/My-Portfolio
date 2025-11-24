@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Arun Kumar T — Portfolio</title>
+  <style>
+    :root{
+      --bg:#f5f8ff;
+      --card:#ffffff;
+      --accent:#1a73e8; /* blue theme */
+      --muted:#586070;
+      --radius:12px;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background:var(--bg);
+      color:#172033;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    .container{max-width:var(--maxw);margin:30px auto;padding:24px}
+
+    /* Header */
+    .hero{background:linear-gradient(180deg,#e8f1ff,transparent);padding:30px;border-radius:var(--radius);display:flex;gap:22px;align-items:center}
+    .avatar{width:160px;height:160px;border-radius:50%;overflow:hidden;flex:0 0 160px;border:6px solid #fff;box-shadow:0 8px 24px rgba(26,115,232,0.12)}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .intro{flex:1}
+    .name{font-size:28px;font-weight:700;margin:0;color:var(--accent)}
+    .meta{margin:8px 0;color:var(--muted)}
+    .links{margin-top:6px}
+    .links a{color:var(--accent);text-decoration:none;margin-right:12px}
+
+    /* Summary, skills, projects */
+    .section{margin-top:22px;background:var(--card);padding:22px;border-radius:var(--radius);box-shadow:0 6px 20px rgba(15,23,42,0.04)}
+    h2{margin:0 0 12px 0;color:var(--accent);font-size:20px}
+    p.lead{color:#263245;line-height:1.6}
+
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .skill{background:#f1f6ff;border:1px solid rgba(26,115,232,0.06);padding:10px 14px;border-radius:999px;font-weight:600;color:var(--accent)}
+
+    /* Projects as stacked cards */
+    .project{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:start;padding:18px;border-radius:10px;border:1px solid rgba(15,23,42,0.04);background:#fff;margin-bottom:12px;transition:transform .28s ease,box-shadow .28s ease}
+    .project:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(15,23,42,0.08)}
+    .project h3{margin:0 0 6px 0;color:#0f1723}
+    .project p{margin:0;color:var(--muted)}
+    .project .actions{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+    .btn{background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:600}
+    .btn.secondary{background:transparent;color:var(--accent);border:1px solid rgba(26,115,232,0.12)}
+
+    /* Certifications grid */
+    .cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+    .cert{background:#fff;padding:10px;border-radius:10px;border:1px solid rgba(15,23,42,0.03);display:flex;align-items:center;justify-content:center;height:110px}
+    .cert img{max-width:100%;max-height:90px;object-fit:contain}
+
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* Responsive */
+    @media (max-width:760px){
+      .hero{flex-direction:column;align-items:center;text-align:center}
+      .project{grid-template-columns:1fr}
+      .project .actions{align-items:center;flex-direction:row}
+    }
+
+    /* Simple fade-in animations */
+    .fade{opacity:0;transform:translateY(8px);animation:fadeIn .6s ease forwards}
+    .delay-1{animation-delay:.08s}
+    .delay-2{animation-delay:.16s}
+    .delay-3{animation-delay:.24s}
+    @keyframes fadeIn{to{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- HERO / HEADER -->
+    <section class="hero fade delay-1">
+      <div class="avatar">
+        <!-- Replace PATH_TO_PROFILE_IMAGE with your image path -->
+        <img src="C:\Users\arunk\Downloads\My portfolio\profile pic.jpg" alt="Arun Kumar T" />
+      </div>
+      <div class="intro">
+        <h1 class="name">Arun Kumar T</h1>
+        <div class="meta">M.Sc. Data Analytics (ongoing) — Christ University, Bangalore</div>
+        <div class="meta">Phone: +91 72047 88106 • Email: <a href="mailto:arunkumartekumani46@gmail.com">arunkumartekumani46@gmail.com</a></div>
+        <div class="links"><a href="https://github.com/Arungthub" target="_blank">GitHub</a> <a href="https://linkedin.com/in/arun-tekumani-775659281" target="_blank">LinkedIn</a> <a href="RESUME_PATH" class="btn secondary">Download Resume</a></div>
+      </div>
+    </section>
+
+    <!-- SUMMARY -->
+    <section class="section fade delay-2">
+      <h2>Summary</h2>
+      <p class="lead">Detail-oriented Data Analytics student currently pursuing an M.Sc. in Data Analytics. Proficient in Python, SQL, Power BI, Tableau, and Excel. Experienced in building dashboards, performing predictive modeling, and conducting NLP-based sentiment analysis. Passionate about converting raw data into actionable business insights and visual stories that support decision-making.</p>
+    </section>
+
+
+     <!-- SUMMARY -->
+    <section class="section fade delay-2">
+      <h2>Education</h2>
+      <p class="lead">Christ University (MSc Data Analytics)      June 2024 - Present</p>
+      <p class="lead">Sri Krishna Degree College (BCA)            Sep 2021 - June 2024  </p>
+
+    </section>
+    
+
+    <!-- SKILLS -->
+    <section class="section fade delay-3">
+      <h2>Skills</h2>
+      <div class="skills" style="margin-top:12px">
+        <div class="skill">Python</div>
+        <div class="skill">SQL</div>
+        <div class="skill">Power BI</div>
+        <div class="skill">Tableau</div>
+        <div class="skill">Excel (Power Query, Power Pivot)</div>
+        <div class="skill">Scikit-learn</div>
+        <div class="skill">TensorFlow / ANN</div>
+        <div class="skill">NLP (NLTK)</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS — stacked, one by one -->
+    <section class="section fade delay-1">
+      <h2>Projects</h2>
+
+      <!-- Project 1 -->
+      <article class="project fade delay-2">
+        <div>
+          <h3>Amazon Sales Dashboard (Power BI)</h3>
+          <p>Developed a sales enablement dashboard that visualizes revenue, category performance, and customer trends. Implemented automated ETL using Power Query and built interactive visuals for sales analysis.</p>
+        </div>
+        <div class="actions">
+          <a class="btn" href="PROJECT_LINK_1" target="_blank">View Project</a>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project fade delay-3">
+        <div>
+          <h3>Big Mart Sales Prediction (Flask + ML)</h3>
+          <p>Built a regression model to forecast item-level sales and deployed it within a Flask web app for interactive predictions. Includes data preview, feature selection, and model performance visualization.</p>
+        </div>
+        <div class="actions">
+          <a class="btn" href="https://github.com/Arungthub/Big_Mart_Sales_prediction" target="_blank">View Project</a>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project fade delay-2">
+        <div>
+          <h3>AMEX Transaction Classification (ANN)</h3>
+          <p>Analyzed American Express transaction data and trained a multi-layer neural network to classify customer outcomes. Included preprocessing (encoding, scaling) and evaluation on unseen data.</p>
+        </div>
+        <div class="actions">
+          <a class="btn" href="https://github.com/Arungthub/AMex-Ann-Project" target="_blank">View Project</a>
+        </div>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="project fade delay-3">
+        <div>
+          <h3>Zomato Review Sentiment Analysis (NLP)</h3>
+          <p>Performed sentiment analysis on Zomato reviews using NLP pipelines and trained a Naïve Bayes classifier. Visualized sentiment distribution and key topics in Tableau.</p>
+        </div>
+        <div class="actions">
+          <a class="btn" href="https://github.com/Arungthub/Zomato-Review-Analysis" target="_blank">View Project</a>
+        </div>
+      </article>
+
+    </section>
+
+
+    <!-- Certifications -->
+
+
+
+    <section class="section fade delay-1">
+      <h2>Certifications</h2>
+    <!-- Certificate 1 -->
+      <article class="project fade delay-3">
+        <div>
+          <h3>Data Analytics</h3>
+        </div>  
+        <div class="actions">
+          <a class="btn" href="C:\Users\arunk\Downloads\My portfolio\Data Analysis  Certification.jpg" target="_blank">View Certificate</a>
+        </div>
+      </article>
+
+      <!-- Certificate 4 -->
+      <article class="project fade delay-3">
+        <div>
+          <h3>Power BI & Business Intelligence </h3>
+        </div>  
+        <div class="actions">
+          <a class="btn" href="C:\Users\arunk\Downloads\My portfolio\Power BI Certification.jpg" target="_blank">View Certificate</a>
+        </div>
+      </article>
+
+      <!-- Certificate 4 -->
+      <article class="project fade delay-3">
+        <div>
+          <h3> Accenture Data Analytics & visulization (Forage)</h3>
+        </div>  
+        <div class="actions">
+          <a class="btn" href="C:\Users\arunk\Downloads\My portfolio\Accenture Certification.jpg" target="_blank">View Certificate</a>
+        </div>
+      </article>
+
+    
+
+      <!-- Certificate 4 -->
+      <article class="project fade delay-3">
+        <div>
+          <h3>American Express (ANN, Project )</h3>
+        </div>  
+        <div class="actions">
+          <a class="btn" href="C:\Users\arunk\Downloads\My portfolio\AmeX Certification.jpg" target="_blank">View Certificate</a>
+        </div>
+      </article>
+
+      <!-- Certificate 4 -->
+      <article class="project fade delay-3">
+        <div>
+          <h3>Zomato Review Sentiment Analysis (NLP, project)</h3>
+        </div>  
+        <div class="actions">
+          <a class="btn" href="C:\Users\arunk\Downloads\My portfolio\Zomato Certification.jpg" target="_blank">View Certificate</a>
+        </div>
+      </article>
+
+    </section>
+
+
+    
+    <footer>
+      © 2025 Arun Kumar T • Bangalore • <a href="mailto:arunkumartekumani46@gmail.com">arunkumartekumani46@gmail.com</a>
+    </footer>
+  </div>
+</body>
+</html>
